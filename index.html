@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeEase - Home Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-mark">⌂</div>
+      <div><strong>HomeEase</strong><small>Services that make life easy</small></div>
+    </div>
+    <div class="location">📍 New Delhi, 110017 ▾</div>
+    <div class="search"><span>⌕</span><input id="searchInput" type="text" placeholder="Search for services (AC repair, cleaning...)"></div>
+    <div class="header-actions"><span>🛒</span><span>🔔</span><span>◉ Hi, Priya ▾</span></div>
+  </header>
+
+  <nav class="nav">
+    <button class="nav-link active" data-section="home">Home</button>
+    <button class="nav-link" data-section="services">Services ▾</button>
+    <button class="nav-link" data-section="appliances">My Appliances</button>
+    <button class="nav-link" data-section="history">Service History</button>
+    <button class="nav-link" data-section="offers">Offers <b>NEW</b></button>
+    <button class="nav-link" data-section="help">Help</button>
+  </nav>
+
+  <main>
+    <section id="home" class="page active">
+      <section class="hero">
+        <div>
+          <h1>Home services at your<br>doorstep, made easier.</h1>
+          <p>Book trusted professionals for all your<br>home needs.</p>
+          <p class="trusted">◉ Trusted by 12L+ happy customers</p>
+          <div class="hero-buttons">
+            <button class="primary" onclick="showSection('services')">Book a Service</button>
+            <button class="secondary" onclick="showHowItWorks()">▶ How it Works</button>
+          </div>
+        </div>
+        <div class="hero-image">🔧<span>AC<br>Service</span></div>
+      </section>
+
+      <section class="section">
+        <div class="section-title"><h2>Popular Services</h2><button onclick="showSection('services')">View all services →</button></div>
+        <div class="service-grid">
+          <div class="service-card" data-name="AC Repair & Service"><div class="service-icon">❄️</div><h3>AC Repair<br>& Service</h3><p>⭐ 4.7 (18K)</p><small>Starting ₹299</small></div>
+          <div class="service-card" data-name="Refrigerator Repair"><div class="service-icon">🧊</div><h3>Refrigerator<br>Repair</h3><p>⭐ 4.6 (12K)</p><small>Starting ₹399</small></div>
+          <div class="service-card" data-name="Washing Machine Repair"><div class="service-icon">🫧</div><h3>Washing Machine<br>Repair</h3><p>⭐ 4.7 (9K)</p><small>Starting ₹299</small></div>
+          <div class="service-card" data-name="Water Purifier Service"><div class="service-icon">💧</div><h3>Water Purifier<br>Service</h3><p>⭐ 4.6 (7K)</p><small>Starting ₹299</small></div>
+          <div class="service-card" data-name="Geyser Repair"><div class="service-icon">♨️</div><h3>Geyser<br>Repair</h3><p>⭐ 4.5 (5K)</p><small>Starting ₹299</small></div>
+          <div class="service-card" data-name="Electrical Services"><div class="service-icon">⚡</div><h3>Electrical<br>Services</h3><p>⭐ 4.6 (11K)</p><small>Starting ₹199</small></div>
+        </div>
+      </section>
+
+      <section class="appliance-banner">
+        <div><span class="tag">NEW</span><h2>My Appliances ✨</h2><p>Manage your appliances, service<br>warranty in one place.</p><button class="yellow" onclick="showSection('appliances')">Add Appliance ＋</button></div>
+        <div class="appliance-visual"><span>❄️<small>Air Conditioner</small></span><span>🧊<small>Refrigerator</small></span><span>🫧<small>Washing Machine</small></span></div>
+        <div class="benefits"><p>▣ Track service history</p><p>♧ Get service reminders</p><p>✓ Check warranty status</p><p>▣ Book service in one tap</p></div>
+      </section>
+    </section>
+
+    <section id="services" class="page">
+      <div class="page-heading"><h1>Book a Service</h1><p>Select your appliance, problem and preferred time slot.</p></div>
+      <div class="booking-layout">
+        <div class="booking-card">
+          <div class="steps"><b>1 Select Appliance</b><span>2 Problem & Service</span><span>3 Choose Time Slot</span></div>
+          <label>1. Select Appliance</label>
+          <div class="appliance-options">
+            <button class="appliance-option selected" data-appliance="AC"><span>❄️</span>LG 1.5 Ton Inverter AC<small>Model: LS-T18T6NXE</small></button>
+            <button class="appliance-option" data-appliance="Refrigerator"><span>🧊</span>Samsung 253L Refrigerator<small>Model: RT28T3623S8</small></button>
+            <button class="appliance-option" data-appliance="Washing Machine"><span>🫧</span>IFB 6.5 Kg Washing Machine<small>Model: ELENA VX 6512</small></button>
+          </div>
+          <label>2. What problem are you facing?</label>
+          <div class="problem-options">
+            <button class="problem selected">❄️<span>AC not cooling</span></button>
+            <button class="problem">🔊<span>AC making noise</span></button>
+            <button class="problem">💧<span>Water leakage</span></button>
+            <button class="problem">♨️<span>Bad smell</span></button>
+            <button class="problem">⚡<span>Electrical issue</span></button>
+          </div>
+          <label>3. Choose a time slot</label>
+          <div class="dates"><button>Today<br><b>24 Jun</b></button><button>Wed<br><b>25 Jun</b></button><button>Thu<br><b>26 Jun</b></button><button>Fri<br><b>27 Jun</b></button><button>Sat<br><b>28 Jun</b></button><button>Sun<br><b>29 Jun</b></button></div>
+          <div class="slots"><button class="slot selected">10:00 AM – 12:00 PM</button><button class="slot">12:00 PM – 02:00 PM</button><button class="slot">02:00 PM – 04:00 PM</button><button class="slot">04:00 PM – 06:00 PM</button></div>
+        </div>
+        <aside class="cost-card"><h3>Estimated Cost</h3><p>Inspection Charge <b>₹99</b></p><p>Service Charge <b>₹499</b></p><hr><p>Estimated Total <strong id="total">₹598</strong> onwards</p><button class="primary full" onclick="confirmBooking()">Continue Booking →</button><small>🔒 Secure & Trusted Booking</small></aside>
+      </div>
+    </section>
+
+    <section id="appliances" class="page">
+      <div class="page-heading row"><div><h1>My Appliances</h1><p>Manage your appliances and service schedules.</p></div><button class="primary" onclick="addAppliance()">＋ Add Appliance</button></div>
+      <div class="stats"><div><b>▦</b><span>Total Appliances<strong>4</strong></span></div><div><b>🔧</b><span>Service Due<strong>2</strong></span></div><div><b>✓</b><span>Warranty Active<strong>3</strong></span></div><div><b>▣</b><span>Total Services<strong>7</strong></span></div></div>
+      <div class="my-appliances">
+        <article><div class="big-icon">❄️</div><h3>LG 1.5 Ton Inverter AC</h3><small>Model: LS-T18T6NXE</small><p>📅 Installed On <b>10 May 2023</b></p><p>🔧 Last Service <b>10 Jun 2024</b></p><p>🗓 Next Service <b class="warning">10 Dec 2024</b></p><p>✓ Warranty Status <b class="success">Active</b></p><button onclick="showSection('services')">Book Service</button></article>
+        <article><div class="big-icon">🧊</div><h3>Samsung 253L Refrigerator</h3><small>Model: RT28T3623S8</small><p>📅 Installed On <b>22 Apr 2023</b></p><p>🔧 Last Service <b>22 Apr 2024</b></p><p>🗓 Next Service <b class="warning">22 Oct 2024</b></p><p>✓ Warranty Status <b class="success">Active</b></p><button onclick="showSection('services')">Book Service</button></article>
+        <article><div class="big-icon">🫧</div><h3>IFB 6.5 Kg Washing Machine</h3><small>Model: ELENA VX 6512</small><p>📅 Installed On <b>15 Jan 2023</b></p><p>🔧 Last Service <b>15 Mar 2024</b></p><p>🗓 Next Service <b class="warning">15 Sep 2024</b></p><p>✓ Warranty Status <b class="success">Active</b></p><button onclick="showSection('services')">Book Service</button></article>
+        <article><div class="big-icon">💧</div><h3>Blue Star Water Purifier</h3><small>Model: Aristo</small><p>📅 Installed On <b>02 Feb 2024</b></p><p>🔧 Last Service <b>02 Feb 2024</b></p><p>🗓 Next Service <b class="warning">02 Aug 2024</b></p><p>✓ Warranty Status <b class="success">Active</b></p><button onclick="showSection('services')">Book Service</button></article>
+      </div>
+    </section>
+
+    <section id="history" class="page">
+      <div class="page-heading"><h1>Service History</h1><p>View your previous HomeEase services.</p></div>
+      <div class="table-card"><table><thead><tr><th>Service ID</th><th>Appliance</th><th>Service Type</th><th>Date</th><th>Amount</th><th>Technician</th><th>Rating</th></tr></thead>
+      <tbody><tr><td>HS98765</td><td>LG 1.5 Ton Inverter AC</td><td>General Service</td><td>10 Jun 2024, 11:00 AM</td><td>₹599</td><td>Ravi Kumar</td><td>⭐ 4.8</td></tr><tr><td>HS87654</td><td>Samsung 253L Refrigerator</td><td>Repair</td><td>22 Apr 2024, 02:30 PM</td><td>₹850</td><td>Amit Singh</td><td>⭐ 4.7</td></tr><tr><td>HS76543</td><td>IFB 6.5 Kg Washing Machine</td><td>Service</td><td>15 Mar 2024, 10:15 AM</td><td>₹499</td><td>Pawan Kumar</td><td>⭐ 4.6</td></tr></tbody></table></div>
+      <button class="primary" onclick="showSection('tracking')">Track Latest Service →</button>
+    </section>
+
+    <section id="offers" class="page"><div class="page-heading"><h1>Offers</h1><p>Save more on your next home service.</p></div><div class="offer-grid"><div><b>WELCOME10</b><h2>10% OFF</h2><p>First service booking</p><button class="primary" onclick="showSection('services')">Book Now</button></div><div><b>CARE20</b><h2>20% OFF</h2><p>Annual appliance maintenance</p><button class="primary" onclick="showSection('services')">Book Now</button></div></div></section>
+
+    <section id="tracking" class="page">
+      <div class="page-heading"><h1>Service Tracking</h1><p>Booking ID: HS98765 · AC Repair · Scheduled: 24 Jun 2024, 10:00 AM – 12:00 PM</p></div>
+      <div class="tracking-card"><div class="technician"><div class="avatar">👨‍🔧</div><h2>Ravi Kumar</h2><p>AC Specialist</p><p>⭐ 4.8 (320 reviews)</p><p>8+ years experience</p><button class="secondary">☎ Call Technician</button></div><div class="map-box"><div class="route-line">📍 ───────── 🚗 ──────── 🏠</div><h3>Technician is on the way</h3><p>2.3 km away from you · Estimated arrival: <b>25 minutes</b></p></div><div class="timeline"><p>🟢 Booking Confirmed</p><p>🟢 Technician Assigned</p><p>🔵 Technician on the way</p><p>⚪ Service Completed</p></div></div>
+      <div class="emergency"><span>🚨</span><div><h2>Appliance stopped working suddenly?</h2><p>We are available 24×7 for emergency repairs.</p></div><button class="primary">Book Emergency Service</button></div>
+      <h2>Future Features</h2><div class="future-grid"><div>🤖<h3>AI Problem Detection</h3><p>Describe the issue and our AI will suggest possible problems.</p></div><div>📷<h3>Photo / Video Diagnosis</h3><p>Upload a photo or video of the issue for diagnosis.</p></div><div>📊<h3>Predictive Maintenance</h3><p>Predict when your appliance needs service.</p></div><div>🔔<h3>Smart Reminders</h3><p>Get reminders for service and warranty expiry.</p></div></div>
+    </section>
+
+    <section id="help" class="page"><div class="page-heading"><h1>Help & Support</h1><p>Need help with your booking or appliance?</p></div><div class="help-card"><h2>How can we help?</h2><p>📞 Customer Support: 1800 123 4567</p><p>💬 Chat with a HomeEase support executive</p><p>🧾 View booking and service details</p><button class="primary" onclick="showSection('services')">Book a Service</button></div></section>
+  </main>
+
+  <footer>🛡 100% Safe & Secure · Trusted Professionals · Genuine Spare Parts · Service Warranty</footer>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
